@@ -41,7 +41,7 @@ post '/' do
     {
       range: (70.00..80.00),
       level: '7th Grade',
-      message: 'Fairly east to read'
+      message: 'Fairly easy to read'
     },
     {
       range: (80.00..90.00),
