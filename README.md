@@ -33,3 +33,5 @@ Score: 64.7
 Reading Level: 8th to 9th Grade
 Plain english
 ```
+
+Demo is located [here](https://article-readability.herokuapp.com/).
