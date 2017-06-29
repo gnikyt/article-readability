@@ -1,0 +1,19 @@
+Metrics/LineLength:
+  Max: 100
+
+Layout/TrailingWhitespace:
+  Enabled: false
+  
+Style/NumericLiterals:
+  Enabled: false
+
+Layout/LeadingCommentSpace:
+  Enabled: false
+
+AllCops:
+  Exclude:
+   - public/*
+   - Gemfile
+   - Gemfile.lock
+   - .*
+   - app/views/*

@@ -1,0 +1,27 @@
+main.container
+  header
+    h1 Article Readability
+    - if request.request_method == 'POST'
+      - if !defined? @score
+        p.results Unable to process. Check input format.
+      - else
+        h3 Results
+        p.results
+          | Letters: #{@score['letter_count']}<br>
+          | Syllables: #{@score['syllable_count']}<br>
+          | Words: #{@score['word_count']}<br>
+          | Sentences: #{@score['sentence_count']}<br>
+          | Avg. Words / Sentance: #{@score['average_words_per_sentence'].round(2)}<br>
+          | Avg. Syllables / Word: #{@score['average_syllables_per_word'].round(2)}
+        p.results
+          strong
+            | Score: #{@score['score'].round(2)}<br>
+            | Reading Level: #{@score_match[:level]}<br>
+            | #{@score_match[:message]}
+
+    p.subhead Enter a URL and the CSS selector path
+  
+  div.container__form
+    form method="post" action="./"
+      input type="text" name="url" placeholder="domain.com/article-path@selectorpath" value=params[:url]
+      button Run
